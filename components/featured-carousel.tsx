@@ -10,6 +10,14 @@ import { motion, AnimatePresence } from "framer-motion"
 const events = [
   {
     id: 1,
+    title: "Tecate Emblema 2025",
+    description: "El festival más esperado con Alanis Morissette, David Guetta, Morat, Pitbull y más",
+    date: "16 y 17 de mayo de 2025",
+    image: "/images/tecate-emblema-2025.png",
+    url: "/event/tecate-emblema",
+  },
+  {
+    id: 2,
     title: "Zoé en Estadio GNP",
     description: "¡La espera terminó! Zoé regresa con un show legendario",
     date: "01 de octubre de 2025",
@@ -17,7 +25,7 @@ const events = [
     url: "/event/zoe",
   },
   {
-    id: 2,
+    id: 3,
     title: "Imagine Dragons",
     description: "La banda internacional llega a México con su gira mundial",
     date: "Próximamente",
@@ -25,22 +33,13 @@ const events = [
     url: "/event/imagine-dragons",
   },
   {
-    id: 3,
+    id: 4,
     title: "Ha*Ash en Auditorio Nacional",
     description: "El dúo más exitoso del pop latino en concierto",
     date: "12 de junio de 2025",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3270ae35e582df4f75869fd03245a186-aRV8JoG3za8HZBc09D9L9UQF3QDTIJ.webp",
     url: "/event/ha-ash-nacional",
-  },
-  {
-    id: 4,
-    title: "Maluma en Palacio de los Deportes",
-    description: "El ídolo colombiano presenta su nuevo tour",
-    date: "08 de agosto de 2025",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/a90b0b892fdf8b1f4fd64f86ced62338-isGdNjLWv9hiM6OzSGGuZpr0T0sZoc.webp",
-    url: "/event/maluma-palacio",
   },
 ]
 

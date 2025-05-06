@@ -8,6 +8,10 @@ import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CountdownTimer } from "@/components/countdown-timer"
 import { StripePaymentButton } from "@/components/stripe-payment-button"
+import { InteractiveSeatMap } from "@/components/interactive-seat-map"
+import { Stage3DView } from "@/components/stage-3d-view"
+import { ReviewSystem } from "@/components/review-system"
+import { NotificationBar } from "@/components/notification-bar"
 
 export default function ZoePage() {
   // Precios
@@ -17,6 +21,7 @@ export default function ZoePage() {
 
   return (
     <main className="min-h-screen bg-white flex flex-col">
+      <NotificationBar />
       <Header />
 
       <div className="container mx-auto px-4 py-4 flex-grow">
@@ -104,12 +109,22 @@ export default function ZoePage() {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="mb-6">
+              <CardContent className="p-6">
+                <h2 className="text-xl font-bold mb-4">Selección de asientos</h2>
+                <InteractiveSeatMap eventId="zoe-2025" />
+              </CardContent>
+            </Card>
+
+            <Card className="mb-6">
               <CardContent className="p-0">
                 <Tabs defaultValue="map">
                   <TabsList className="w-full rounded-none border-b">
                     <TabsTrigger value="map" className="flex-1">
                       Mapa de asientos
+                    </TabsTrigger>
+                    <TabsTrigger value="3d" className="flex-1">
+                      Vista 3D
                     </TabsTrigger>
                     <TabsTrigger value="info" className="flex-1">
                       Información importante
@@ -141,6 +156,10 @@ export default function ZoePage() {
                         </p>
                       </div>
                     </div>
+                  </TabsContent>
+
+                  <TabsContent value="3d" className="p-6">
+                    <Stage3DView seatSection="B" seatRow="5" seatNumber={10} />
                   </TabsContent>
 
                   <TabsContent value="info" className="p-6">
@@ -185,6 +204,12 @@ export default function ZoePage() {
                     </div>
                   </TabsContent>
                 </Tabs>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <ReviewSystem eventId="zoe-2025" eventName="Zoé en Estadio GNP" />
               </CardContent>
             </Card>
           </div>

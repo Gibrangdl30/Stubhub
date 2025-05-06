@@ -13,9 +13,11 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { NotificationSystem } from "@/components/notification-system"
 
 export function Header() {
   const [user, setUser] = useState<{ name: string; email: string } | null>(null)
+  const [unreadCount, setUnreadCount] = useState(3)
 
   useEffect(() => {
     // Verificar si hay un usuario en localStorage
@@ -60,6 +62,10 @@ export function Header() {
             <Button variant="outline" className="hidden md:inline-flex">
               Asistencia
             </Button>
+
+            <div className="relative">
+              <NotificationSystem />
+            </div>
 
             {user ? (
               <DropdownMenu>
