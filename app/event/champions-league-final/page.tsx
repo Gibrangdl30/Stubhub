@@ -6,14 +6,14 @@ import { Shield, Mail, Phone, Calendar, MapPin, Clock, User } from "lucide-react
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { CountdownTimer } from "@/components/countdown-timer"
 import { StripePaymentButton } from "@/components/stripe-payment-button"
+import { CountdownTimer } from "@/components/countdown-timer"
 
-export default function ZoePage() {
+export default function ChampionsLeagueFinalPage() {
   // Precios
-  const cardPrice = 1200
-  const transferPrice = 850
-  const ticketsRemaining = 6
+  const cardPrice = 15000
+  const transferPrice = 12500
+  const ticketsRemaining = 4
 
   return (
     <main className="min-h-screen bg-white flex flex-col">
@@ -39,14 +39,14 @@ export default function ZoePage() {
           </Link>
           <div>
             <h1 className="text-xl font-bold">
-              Boletos <span className="text-teal-500">Zoé</span> Ciudad de México
+              Boletos <span className="text-teal-500">Final Liga de Campeones</span> Londres
             </h1>
             <p className="text-sm text-gray-600">
-              mié, 01 de oct de 2025 • 9:00 p.m. at{" "}
+              sáb, 31 de may de 2025 • 8:00 p.m. at{" "}
               <Link href="#" className="text-teal-500">
-                Estadio GNP Seguros
+                Estadio de Wembley
               </Link>
-              , Ciudad de México
+              , Londres, Reino Unido
             </p>
           </div>
         </div>
@@ -55,8 +55,8 @@ export default function ZoePage() {
           <div className="md:col-span-2">
             <div className="mb-6">
               <Image
-                src="/images/zoe-concert.png"
-                alt="Zoé"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/sh_clf25_414x90_x2_MX-WN9XheEhc9PZQ6r9b81tOYpG99dw7a.jpeg"
+                alt="Final Liga de Campeones"
                 width={800}
                 height={500}
                 className="w-full h-auto rounded-lg"
@@ -67,15 +67,14 @@ export default function ZoePage() {
               <CardContent className="p-6">
                 <h2 className="text-xl font-bold mb-4">Información del evento</h2>
                 <p className="mb-4">
-                  ¡La espera terminó! Después de casi tres años sin presentarse juntos, Zoé, una de las bandas más
-                  influyentes del rock contemporáneo en español, regresa a la Ciudad de México con un show que promete
-                  ser legendario. El próximo 1 de octubre, el Estadio GNP Seguros se convertirá en el punto de encuentro
-                  entre miles de fans y una banda que marcó a toda una generación.
+                  La final de la UEFA Champions League 2025 se celebrará en el icónico Estadio de Wembley en Londres.
+                  Este evento es la culminación del torneo de clubes más prestigioso del mundo, donde los dos mejores
+                  equipos de Europa se enfrentarán por el título de campeón.
                 </p>
 
                 <div className="bg-purple-50 p-4 rounded-lg border border-purple-100 mb-4">
                   <h3 className="font-bold text-purple-900 mb-2">El evento comienza en:</h3>
-                  <CountdownTimer targetDate="2025-10-01T21:00:00" className="justify-center" />
+                  <CountdownTimer targetDate="2025-05-31T20:00:00" className="justify-center" />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
@@ -83,14 +82,14 @@ export default function ZoePage() {
                     <Calendar className="h-5 w-5 mr-2 text-purple-900 mt-0.5" />
                     <div>
                       <h3 className="font-semibold">Fecha y hora</h3>
-                      <p className="text-sm">Miércoles, 1 de octubre de 2025, 9:00 p.m.</p>
+                      <p className="text-sm">Sábado, 31 de mayo de 2025, 8:00 p.m.</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <MapPin className="h-5 w-5 mr-2 text-purple-900 mt-0.5" />
                     <div>
                       <h3 className="font-semibold">Lugar</h3>
-                      <p className="text-sm">Estadio GNP Seguros, CDMX</p>
+                      <p className="text-sm">Estadio de Wembley, Londres</p>
                     </div>
                   </div>
                   <div className="flex items-start">
@@ -106,81 +105,82 @@ export default function ZoePage() {
 
             <Card>
               <CardContent className="p-0">
-                <Tabs defaultValue="map">
+                <Tabs defaultValue="info">
                   <TabsList className="w-full rounded-none border-b">
-                    <TabsTrigger value="map" className="flex-1">
-                      Mapa de asientos
-                    </TabsTrigger>
                     <TabsTrigger value="info" className="flex-1">
                       Información importante
                     </TabsTrigger>
+                    <TabsTrigger value="travel" className="flex-1">
+                      Información de viaje
+                    </TabsTrigger>
                   </TabsList>
-
-                  <TabsContent value="map" className="p-6">
-                    <div className="mb-4">
-                      <h3 className="text-lg font-bold mb-2">Mapa del Estadio GNP Seguros</h3>
-                      <div className="bg-white p-2 border rounded-lg">
-                        <Image
-                          src="/images/estadio-gnp-map.png"
-                          alt="Mapa de asientos Estadio GNP Seguros"
-                          width={800}
-                          height={800}
-                          className="w-full h-auto"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="mt-4">
-                      <h3 className="text-lg font-bold mb-2">Ubicación de tus asientos</h3>
-                      <div className="p-4 border rounded-lg bg-blue-50">
-                        <p className="font-medium">
-                          Zona: <span className="text-blue-600">General B</span>
-                        </p>
-                        <p className="text-sm text-gray-600 mt-2">
-                          Los asientos están ubicados en la zona General B, con excelente visibilidad del escenario.
-                        </p>
-                      </div>
-                    </div>
-                  </TabsContent>
 
                   <TabsContent value="info" className="p-6">
                     <div className="space-y-4">
                       <div className="border-b pb-3">
-                        <h3 className="font-semibold mb-1">Límite de edad</h3>
-                        <p className="text-sm">No hay</p>
-                      </div>
-
-                      <div className="border-b pb-3">
-                        <h3 className="font-semibold mb-1">Pagan boleto a partir de</h3>
-                        <p className="text-sm">3 años</p>
+                        <h3 className="font-semibold mb-1">Equipos</h3>
+                        <p className="text-sm">
+                          Los equipos finalistas se determinarán tras las semifinales de la UEFA Champions League.
+                        </p>
                       </div>
 
                       <div className="border-b pb-3">
                         <h3 className="font-semibold mb-1">Restricciones</h3>
                         <p className="text-sm">
-                          Se prohíbe ingresar al evento con: Objetos punzocortantes, mascotas, lasers, comida y/o
-                          bebida, sombrillas, aerosoles, bolsas que superen los 30x30cm, botellas de cualquier tipo,
-                          latas, sillas, cobijas, anforitas, navajas, pirotecnia, spray pimienta, drogas, sustancias
-                          ilícitas, cámaras profesionales de foto y/o video o equipo de grabación de audio.
+                          No se permite el ingreso con cámaras profesionales, bebidas alcohólicas, objetos punzantes,
+                          pirotecnia o cualquier otro objeto que pueda ser considerado peligroso.
                         </p>
                       </div>
 
                       <div className="border-b pb-3">
-                        <h3 className="font-semibold mb-1">Límite de acceso</h3>
-                        <p className="text-sm">Recomendamos anticipar su llegada</p>
+                        <h3 className="font-semibold mb-1">Acceso al estadio</h3>
+                        <p className="text-sm">
+                          Se recomienda llegar al estadio con al menos 2 horas de anticipación debido a los controles de
+                          seguridad.
+                        </p>
                       </div>
 
                       <div className="border-b pb-3">
                         <h3 className="font-semibold mb-1">Servicios</h3>
                         <p className="text-sm">
-                          Sanitarios. Venta de alimentos, bebidas y mercancía oficial. Atención a Personas con
-                          Discapacidad.
+                          El estadio cuenta con servicios de comida y bebida, tiendas oficiales, y asistencia médica.
+                        </p>
+                      </div>
+                    </div>
+                  </TabsContent>
+
+                  <TabsContent value="travel" className="p-6">
+                    <div className="space-y-4">
+                      <div className="border-b pb-3">
+                        <h3 className="font-semibold mb-1">Transporte</h3>
+                        <p className="text-sm">
+                          El Estadio de Wembley está bien conectado por transporte público. Se recomienda utilizar el
+                          metro (estaciones Wembley Park o Wembley Central) o los autobuses locales.
                         </p>
                       </div>
 
                       <div className="border-b pb-3">
-                        <h3 className="font-semibold mb-1">Límite de boletos</h3>
-                        <p className="text-sm">8 por persona</p>
+                        <h3 className="font-semibold mb-1">Alojamiento</h3>
+                        <p className="text-sm">
+                          Se recomienda reservar alojamiento con anticipación debido a la alta demanda durante el
+                          evento.
+                        </p>
+                      </div>
+
+                      <div className="border-b pb-3">
+                        <h3 className="font-semibold mb-1">Documentación</h3>
+                        <p className="text-sm">
+                          Los visitantes internacionales deben asegurarse de tener pasaporte válido y, si es necesario,
+                          visa para ingresar al Reino Unido.
+                        </p>
+                      </div>
+
+                      <div className="border-b pb-3">
+                        <h3 className="font-semibold mb-1">Paquetes de viaje</h3>
+                        <p className="text-sm">
+                          Ofrecemos paquetes que incluyen boleto, alojamiento y traslados. Contacta con nuestro equipo
+                          para más información.
+                        </p>
                       </div>
                     </div>
                   </TabsContent>

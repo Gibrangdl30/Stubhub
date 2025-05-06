@@ -6,6 +6,8 @@ import { Shield, Mail, Phone, Calendar, MapPin, Clock } from "lucide-react"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { StripePaymentButton } from "@/components/stripe-payment-button"
+import { CountdownTimer } from "@/components/countdown-timer"
 
 export default function RelsBPage() {
   // Precios
@@ -68,6 +70,11 @@ export default function RelsBPage() {
                   Rels B llega a México con su nuevo tour. No te pierdas la oportunidad de ver a este artista en vivo en
                   el Palacio de los Deportes de la Ciudad de México.
                 </p>
+
+                <div className="bg-purple-50 p-4 rounded-lg border border-purple-100 mb-4">
+                  <h3 className="font-bold text-purple-900 mb-2">El evento comienza en:</h3>
+                  <CountdownTimer targetDate="2025-09-04T20:00:00" className="justify-center" />
+                </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
                   <div className="flex items-start">
@@ -188,19 +195,17 @@ export default function RelsBPage() {
                   </div>
                   <p className="text-sm text-gray-500 mb-4">cada uno</p>
 
-                  <div
-                    className="mb-4"
-                    dangerouslySetInnerHTML={{
-                      __html: `
-                        <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-                        <stripe-buy-button
-                          buy-button-id="buy_btn_1RKTRMDmbPVIe78QmiaOmoQv"
-                          publishable-key="pk_live_51RJVg0DmbPVIe78Q9S3NUPRaGC842f1uwbNY5htrYteg2p4TTFKHQoCFh0lyaEQi1dOah5M2VpMYrGicNV36K4fP00zwV4vBDO"
-                        >
-                        </stripe-buy-button>
-                      `,
-                    }}
-                  />
+                  <StripePaymentButton className="mb-4" />
+
+                  <div className="mt-2 text-center">
+                    <Link
+                      href="https://buy.stripe.com/eVaeX5gtr2qE8da002?locale=es-419"
+                      target="_blank"
+                      className="text-sm text-purple-900 hover:underline"
+                    >
+                      Abrir página de pago completa
+                    </Link>
+                  </div>
                 </div>
 
                 <div className="mb-4">

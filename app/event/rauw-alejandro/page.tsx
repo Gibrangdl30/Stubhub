@@ -5,6 +5,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Shield, Mail, Phone } from "lucide-react"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
+import { StripePaymentButton } from "@/components/stripe-payment-button"
+import { CountdownTimer } from "@/components/countdown-timer"
 
 export default function RauwAlejandroPage() {
   // Precio original y con descuento
@@ -68,6 +70,11 @@ export default function RauwAlejandroPage() {
                   artista puertorriqueño presentará todos sus éxitos en una noche inolvidable.
                 </p>
 
+                <div className="bg-purple-50 p-4 rounded-lg border border-purple-100 mb-4">
+                  <h3 className="font-bold text-purple-900 mb-2">El evento comienza en:</h3>
+                  <CountdownTimer targetDate="2025-11-08T20:00:00" className="justify-center" />
+                </div>
+
                 <div className="bg-yellow-50 border border-yellow-200 rounded-md p-4 mb-4">
                   <p className="font-bold text-yellow-800">¡OFERTA ESPECIAL!</p>
                   <p className="text-yellow-800">
@@ -93,19 +100,17 @@ export default function RauwAlejandroPage() {
                   </div>
                   <p className="text-sm text-gray-500 mb-4">cada uno</p>
 
-                  <div
-                    className="mb-4"
-                    dangerouslySetInnerHTML={{
-                      __html: `
-                        <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-                        <stripe-buy-button
-                          buy-button-id="buy_btn_1RKuC9DmbPVIe78Qcd3um9rH"
-                          publishable-key="pk_live_51RJVg0DmbPVIe78Q9S3NUPRaGC842f1uwbNY5htrYteg2p4TTFKHQoCFh0lyaEQi1dOah5M2VpMYrGicNV36K4fP00zwV4vBDO"
-                        >
-                        </stripe-buy-button>
-                      `,
-                    }}
-                  />
+                  <StripePaymentButton className="mb-4" />
+
+                  <div className="mt-2 text-center">
+                    <Link
+                      href="https://buy.stripe.com/eVaeX5gtr2qE8da002?locale=es-419"
+                      target="_blank"
+                      className="text-sm text-purple-900 hover:underline"
+                    >
+                      Abrir página de pago completa
+                    </Link>
+                  </div>
                 </div>
 
                 <div className="mb-4">
@@ -127,10 +132,11 @@ export default function RauwAlejandroPage() {
                     <Link href="/comprar">Comprar con descuento</Link>
                   </Button>
 
-                  <div className="mt-4 text-sm text-gray-600">
-                    <p>
-                      Después de realizar la transferencia, envía el comprobante para confirmar tu compra y recibir tus
-                      boletos.
+                  <div className="bg-gray-100 p-3 rounded-md mt-4 mb-4">
+                    <p className="font-medium text-sm">Datos bancarios:</p>
+                    <p className="font-medium text-sm">Banco: Inbursa</p>
+                    <p className="font-medium text-sm">
+                      CLABE: <span className="text-green-600">036260711506296288</span>
                     </p>
                   </div>
                 </div>
