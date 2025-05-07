@@ -74,25 +74,27 @@ export function SoccerMatches() {
               <div className="p-4 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
                 <div className="flex justify-between items-center">
                   <div className="flex items-center space-x-2">
-                    <Image
-                      src={match.homeTeamLogo || "/placeholder.svg"}
-                      alt={match.homeTeam}
-                      width={40}
-                      height={40}
-                      className="rounded-full bg-white p-1"
-                    />
+                    <div className="w-10 h-10 relative bg-white rounded-full p-1">
+                      <Image
+                        src={match.homeTeamLogo || "/placeholder.svg"}
+                        alt={match.homeTeam}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
                     <span className="font-bold">{match.homeTeam}</span>
                   </div>
                   <span className="text-xl font-bold">VS</span>
                   <div className="flex items-center space-x-2">
                     <span className="font-bold">{match.awayTeam}</span>
-                    <Image
-                      src={match.awayTeamLogo || "/placeholder.svg"}
-                      alt={match.awayTeam}
-                      width={40}
-                      height={40}
-                      className="rounded-full bg-white p-1"
-                    />
+                    <div className="w-10 h-10 relative bg-white rounded-full p-1">
+                      <Image
+                        src={match.awayTeamLogo || "/placeholder.svg"}
+                        alt={match.awayTeam}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>

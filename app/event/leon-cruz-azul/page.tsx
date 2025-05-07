@@ -1,5 +1,7 @@
 import { EventDetails } from "@/components/event-details"
 import { TicketOptions } from "@/components/ticket-options"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 
 export default function LeonCruzAzulPage() {
   const eventDetails = {
@@ -27,11 +29,13 @@ export default function LeonCruzAzulPage() {
   ]
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-4 md:p-8">
-      <div className="w-full max-w-7xl mx-auto">
+    <main className="flex min-h-screen flex-col">
+      <Header />
+      <div className="w-full max-w-7xl mx-auto p-4 md:p-8">
         <EventDetails event={eventDetails} />
         <TicketOptions options={ticketOptions} eventId={eventDetails.id} />
       </div>
+      <Footer />
     </main>
   )
 }
