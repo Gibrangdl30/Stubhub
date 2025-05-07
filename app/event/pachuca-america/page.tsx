@@ -10,7 +10,7 @@ export default function PachucaAmericaPage() {
     date: "Miércoles 7 de mayo",
     time: "21:10 hrs México",
     venue: "Estadio Hidalgo",
-    address: "Blvd. Felipe Ángeles s/n, Zona Plateada, 42083 Pachuca, Hgo.",
+    address: "Blvd. Luis Donaldo Colosio 3000, Arboledas de Santa Elena, 42184 Pachuca de Soto, Hgo.",
     description:
       "Disfruta del emocionante partido de la Liga MX entre Pachuca y América en el Estadio Hidalgo. ¡No te pierdas la acción en vivo!",
     image: "/images/estadio-hidalgo-map.png",
@@ -23,10 +23,38 @@ export default function PachucaAmericaPage() {
   }
 
   const ticketOptions = [
-    { zone: "NORTE", price: 1200, discount: 30, availability: "Alta" },
-    { zone: "ORIENTE", price: 1200, discount: 30, availability: "Media" },
-    { zone: "PONIENTE", price: 1200, discount: 30, availability: "Media" },
-    { zone: "SUR", price: 1200, discount: 30, availability: "Alta" },
+    {
+      id: "norte",
+      zone: "NORTE",
+      price: 1200,
+      discount: 30,
+      availability: "Alta",
+      description: "Zona Norte con vista frontal al campo",
+    },
+    {
+      id: "oriente",
+      zone: "ORIENTE",
+      price: 1200,
+      discount: 30,
+      availability: "Media",
+      description: "Zona Oriente con vista lateral al campo",
+    },
+    {
+      id: "poniente",
+      zone: "PONIENTE",
+      price: 1200,
+      discount: 30,
+      availability: "Media",
+      description: "Zona Poniente con vista lateral al campo",
+    },
+    {
+      id: "sur",
+      zone: "SUR",
+      price: 1200,
+      discount: 30,
+      availability: "Alta",
+      description: "Zona Sur con vista frontal al campo",
+    },
   ]
 
   return (

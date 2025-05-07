@@ -23,10 +23,38 @@ export default function MonterreyTolucaPage() {
   }
 
   const ticketOptions = [
-    { zone: "PTE 101-102, 137-138", price: 800, discount: 30, availability: "Alta" },
-    { zone: "PONIENTE 103, 136", price: 800, discount: 30, availability: "Media" },
-    { zone: "PTE 104-106, 133-135", price: 790, discount: 30, availability: "Media" },
-    { zone: "OTE 118-121", price: 750, discount: 30, availability: "Alta" },
+    {
+      id: "pte-101-102",
+      zone: "PTE 101-102, 137-138",
+      price: 800,
+      discount: 30,
+      availability: "Alta",
+      description: "Zona Poniente con vista lateral al campo",
+    },
+    {
+      id: "pte-103",
+      zone: "PONIENTE 103, 136",
+      price: 800,
+      discount: 30,
+      availability: "Media",
+      description: "Zona Poniente con vista lateral al campo",
+    },
+    {
+      id: "pte-104-106",
+      zone: "PTE 104-106, 133-135",
+      price: 790,
+      discount: 30,
+      availability: "Media",
+      description: "Zona Poniente con vista lateral al campo",
+    },
+    {
+      id: "ote-118-121",
+      zone: "OTE 118-121",
+      price: 750,
+      discount: 30,
+      availability: "Alta",
+      description: "Zona Oriente con vista lateral al campo",
+    },
   ]
 
   return (

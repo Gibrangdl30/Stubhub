@@ -23,9 +23,33 @@ export default function LeonCruzAzulPage() {
   }
 
   const ticketOptions = [
-    { zone: "SOL", price: 1000, maxPrice: 1300, discount: 30, availability: "Alta" },
-    { zone: "PREF", price: 1500, maxPrice: 1700, discount: 30, availability: "Media" },
-    { zone: "ZONA A", price: 1700, discount: 30, availability: "Baja" },
+    {
+      id: "sol",
+      zone: "SOL",
+      price: 1000,
+      maxPrice: 1300,
+      discount: 30,
+      availability: "Alta",
+      description: "Zona Sol con vista lateral al campo",
+    },
+    {
+      id: "pref",
+      zone: "PREF",
+      price: 1500,
+      maxPrice: 1700,
+      discount: 30,
+      availability: "Media",
+      description: "Zona Preferente con vista central al campo",
+    },
+    {
+      id: "zona-a",
+      zone: "ZONA A",
+      price: 1700,
+      maxPrice: 1700,
+      discount: 30,
+      availability: "Baja",
+      description: "Zona A con las mejores vistas al campo",
+    },
   ]
 
   return (
