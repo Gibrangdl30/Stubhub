@@ -11,17 +11,17 @@ export function SoccerMatches() {
       homeTeam: "Rayados",
       awayTeam: "Toluca",
       homeTeamLogo: "/images/monterrey-logo.png",
-      awayTeamLogo: "/images/toluca-logo.png",
+      awayTeamLogo: "/images/toluca-logo.jpeg",
       stadium: "Estadio BBVA",
       date: "Miércoles 7 de mayo",
       time: "19:00 hrs México",
       timeET: "21:00 hrs ET",
       timePT: "18:00 hrs Pacífico",
       prices: [
-        { zone: "PTE 101-102, 137-138", price: "$800" },
-        { zone: "PONIENTE 103, 136", price: "$800" },
-        { zone: "PTE 104-106, 133-135", price: "$790" },
-        { zone: "OTE 118-121", price: "$750" },
+        { zone: "PTE 101-102, 137-138", price: "$900", normalPrice: "$6,300" },
+        { zone: "PONIENTE 103, 136", price: "$900", normalPrice: "$6,300" },
+        { zone: "PTE 104-106, 133-135", price: "$1,000", normalPrice: "$1,450" },
+        { zone: "OTE 118-121", price: "$1,000", normalPrice: "$1,450" },
       ],
       discount: "30%",
     },
@@ -37,10 +37,10 @@ export function SoccerMatches() {
       timeET: "23:10 hrs ET",
       timePT: "20:10 hrs Pacífico",
       prices: [
-        { zone: "NORTE", price: "$1,200.00" },
-        { zone: "ORIENTE", price: "$1,200.00" },
-        { zone: "PONIENTE", price: "$1,200.00" },
-        { zone: "SUR", price: "$1,200.00" },
+        { zone: "NORTE", price: "$1,200.00", normalPrice: "$1,700.00" },
+        { zone: "ORIENTE", price: "$1,200.00", normalPrice: "$1,700.00" },
+        { zone: "PONIENTE", price: "$1,200.00", normalPrice: "$1,700.00" },
+        { zone: "SUR", price: "$1,200.00", normalPrice: "$1,700.00" },
       ],
       discount: "30%",
     },
@@ -56,9 +56,9 @@ export function SoccerMatches() {
       timeET: "23:10 hrs ET",
       timePT: "20:10 hrs Pacífico",
       prices: [
-        { zone: "SOL", price: "$1,000 - $1,300" },
-        { zone: "PREF", price: "$1,500 - $1,700" },
-        { zone: "ZONA A", price: "$1,700" },
+        { zone: "SOL", price: "$1,000", normalPrice: "$1,300" },
+        { zone: "PREF", price: "$1,500", normalPrice: "$1,700" },
+        { zone: "ZONA A", price: "$1,700", normalPrice: "$2,000" },
       ],
       discount: "30%",
     },
@@ -118,7 +118,12 @@ export function SoccerMatches() {
                     {match.prices.map((price, index) => (
                       <li key={index} className="flex justify-between mb-1">
                         <span>{price.zone}</span>
-                        <span className="font-medium">{price.price}</span>
+                        <div className="text-right">
+                          <span className="font-medium">{price.price}</span>
+                          {price.normalPrice && (
+                            <span className="text-xs text-gray-500 line-through ml-1">{price.normalPrice}</span>
+                          )}
+                        </div>
                       </li>
                     ))}
                   </ul>
