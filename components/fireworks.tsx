@@ -40,6 +40,30 @@ export function Fireworks() {
         $.fill()
       }
 
+      // Añadir texto con sombra para mejor visibilidad
+      $.globalCompositeOperation = "source-over"
+      $.font = "bold 24px Arial"
+      $.textAlign = "center"
+      $.textBaseline = "middle"
+
+      // Sombra para mejorar visibilidad
+      $.shadowColor = "rgba(0, 0, 0, 0.8)"
+      $.shadowBlur = 10
+      $.shadowOffsetX = 2
+      $.shadowOffsetY = 2
+
+      // Texto principal
+      $.fillStyle = "white"
+      $.fillText("STUBHUB.MX", canvas.width / 2, canvas.height / 2 - 40)
+      $.fillText("¡LOS MEJORES EVENTOS!", canvas.width / 2, canvas.height / 2)
+      $.fillText("COMPRA SEGURA", canvas.width / 2, canvas.height / 2 + 40)
+
+      // Resetear sombra
+      $.shadowColor = "transparent"
+      $.shadowBlur = 0
+      $.shadowOffsetX = 0
+      $.shadowOffsetY = 0
+
       t += 0.000005
       t %= 2 * Math.PI
     }

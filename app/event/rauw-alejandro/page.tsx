@@ -52,14 +52,17 @@ export default function RauwAlejandroPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="md:col-span-2">
-            <div className="mb-6">
-              <Image
-                src="/images/rauw-alejandro-new2.png"
-                alt="Rauw Alejandro"
-                width={800}
-                height={500}
-                className="w-full h-auto rounded-lg"
-              />
+            <div className="mb-6 relative">
+              <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                <Image
+                  src="/images/rauw-alejandro-new2.png"
+                  alt="Rauw Alejandro"
+                  width={800}
+                  height={500}
+                  className="w-full h-auto object-cover rounded-lg"
+                  priority
+                />
+              </div>
             </div>
 
             <Card>
