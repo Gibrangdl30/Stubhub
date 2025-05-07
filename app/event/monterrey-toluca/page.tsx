@@ -17,7 +17,7 @@ export default function MonterreyTolucaPage() {
     address: "Av. Pablo Livas 2011, La Pastora, 67140 Guadalupe, N.L.",
     description:
       "Disfruta del emocionante partido de la Liga MX entre Rayados de Monterrey y Toluca en el Estadio BBVA. ¡No te pierdas la acción en vivo!",
-    image: "/images/estadio-bbva-map.jpeg",
+    image: "https://www.estadio-bbva.mx/imagesSitio/files/MapaPB.jpg",
     additionalInfo: [
       "21:00 hrs ET y 18:00 hrs Pacífico Estados Unidos",
       "Acceso a todas las instalaciones del estadio",
@@ -85,19 +85,19 @@ export default function MonterreyTolucaPage() {
                       <span className="text-2xl font-bold">$900</span>
                       <span className="ml-2 text-sm line-through text-gray-500">$1,300</span>
                     </div>
-                    <p className="text-sm text-gray-600 mb-2">Disponibilidad: Alta</p>
+                    <p className="text-sm text-gray-600 mb-2">Disponibilidad: ULTIMOS BOLETOS DISPONINLBILIDAD ALTA</p>
                   </div>
 
                   <div className="border rounded-lg p-4">
                     <div className="flex justify-between mb-2">
-                      <h3 className="font-bold">PTE 104-106, 133-135</h3>
+                      <h3 className="font-bold">BOLETOS, AGOTADOS</h3>
                       <Badge className="bg-red-600">-30%</Badge>
                     </div>
                     <div className="flex items-baseline mb-2">
                       <span className="text-2xl font-bold">$1,000</span>
                       <span className="ml-2 text-sm line-through text-gray-500">$1,450</span>
                     </div>
-                    <p className="text-sm text-gray-600 mb-2">Disponibilidad: Media</p>
+                    <p className="text-sm text-gray-600 mb-2">Disponibilidad: ALTA</p>
                   </div>
                 </div>
 
