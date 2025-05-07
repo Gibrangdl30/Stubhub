@@ -8,6 +8,7 @@ import { Calendar, MapPin, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { CountdownTimer } from "@/components/countdown-timer"
 
+// Eventos actualizados para 2025
 const featuredEvents = [
   {
     id: 1,
@@ -52,6 +53,50 @@ const featuredEvents = [
     targetDate: "2025-08-08T21:00:00",
     tickets: 6,
   },
+  {
+    id: 5,
+    title: "Karol G",
+    venue: "Estadio Azteca, CDMX",
+    date: "12 de julio de 2025",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/descarga%20%283%29-8A5etXsVuEcEda2xGsKpwoqmkxitqh.jpeg",
+    url: "/event/karol-g",
+    targetDate: "2025-07-12T20:00:00",
+    tickets: 8,
+  },
+  {
+    id: 6,
+    title: "Bad Bunny",
+    venue: "Foro Sol, CDMX",
+    date: "25 de septiembre de 2025",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/descarga%20%284%29-HnXYR7AwLvcHIac1TELJXEziwjrCB9.jpeg",
+    url: "/event/bad-bunny",
+    targetDate: "2025-09-25T21:00:00",
+    tickets: 4,
+  },
+  {
+    id: 7,
+    title: "Peso Pluma",
+    venue: "Arena Monterrey, Monterrey",
+    date: "18 de junio de 2025",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/descarga%20%283%29-sn6H308VsZ08J7l6aCg6BSpRCT8Z98.webp",
+    url: "/event/peso-pluma",
+    targetDate: "2025-06-18T20:30:00",
+    tickets: 10,
+  },
+  {
+    id: 8,
+    title: "Feid",
+    venue: "Estadio BBVA, Monterrey",
+    date: "05 de diciembre de 2025",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/descarga%20%286%29-4BNqdb5s9I0TVLf6UJ7dnXA1CYgPHf.jpeg",
+    url: "/event/feid",
+    targetDate: "2025-12-05T21:00:00",
+    tickets: 12,
+  },
 ]
 
 export function FeaturedEvents() {
@@ -67,7 +112,7 @@ export function FeaturedEvents() {
             key={event.id}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
             className="group"
             onMouseEnter={() => setHoveredEvent(event.id)}
