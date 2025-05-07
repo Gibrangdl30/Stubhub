@@ -2,127 +2,134 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { motion } from "framer-motion"
-import { Calendar, Clock, MapPin } from "lucide-react"
-import { Button } from "@/components/ui/button"
-
-const soccerMatches = [
-  {
-    id: 1,
-    title: "Pachuca vs. América",
-    venue: "Estadio Hidalgo",
-    date: "Miércoles 7 de mayo",
-    time: "21:10 hrs",
-    image: "/images/pachuca-america.png",
-    url: "/event/pachuca-america",
-    homeTeam: "Pachuca",
-    awayTeam: "América",
-    homeTeamLogo: "https://logodownload.org/wp-content/uploads/2019/09/pachuca-logo-0.png",
-    awayTeamLogo: "https://logodownload.org/wp-content/uploads/2018/07/club-america-logo-escudo.png",
-  },
-  {
-    id: 2,
-    title: "León vs. Cruz Azul",
-    venue: "Estadio Nou Camp",
-    date: "Jueves 8 de mayo",
-    time: "21:10 hrs",
-    image: "/images/leon-cruz-azul.png",
-    url: "/event/leon-cruz-azul",
-    homeTeam: "León",
-    awayTeam: "Cruz Azul",
-    homeTeamLogo: "https://logodownload.org/wp-content/uploads/2019/09/club-leon-logo-0.png",
-    awayTeamLogo: "https://logodownload.org/wp-content/uploads/2018/07/cruz-azul-logo-escudo.png",
-  },
-  {
-    id: 3,
-    title: "Rayados vs. Toluca",
-    venue: "Estadio BBVA",
-    date: "Miércoles 7 de mayo",
-    time: "19:00 hrs",
-    image: "/images/monterrey-toluca.png",
-    url: "/event/rayados-toluca",
-    homeTeam: "Monterrey",
-    awayTeam: "Toluca",
-    homeTeamLogo: "https://logodownload.org/wp-content/uploads/2019/09/monterrey-logo-0.png",
-    awayTeamLogo: "https://logodownload.org/wp-content/uploads/2019/09/toluca-logo-0.png",
-  },
-]
+import { Badge } from "@/components/ui/badge"
 
 export function SoccerMatches() {
-  return (
-    <section className="px-4 py-8 md:px-8">
-      <h2 className="text-2xl font-bold mb-6">Partidos de fútbol</h2>
+  const matches = [
+    {
+      id: "monterrey-toluca",
+      homeTeam: "Rayados",
+      awayTeam: "Toluca",
+      homeTeamLogo: "/images/monterrey-logo.png",
+      awayTeamLogo: "/images/toluca-logo.png",
+      stadium: "Estadio BBVA",
+      date: "Miércoles 7 de mayo",
+      time: "19:00 hrs México",
+      timeET: "21:00 hrs ET",
+      timePT: "18:00 hrs Pacífico",
+      prices: [
+        { zone: "PTE 101-102, 137-138", price: "$800" },
+        { zone: "PONIENTE 103, 136", price: "$800" },
+        { zone: "PTE 104-106, 133-135", price: "$790" },
+        { zone: "OTE 118-121", price: "$750" },
+      ],
+      discount: "30%",
+    },
+    {
+      id: "pachuca-america",
+      homeTeam: "Pachuca",
+      awayTeam: "América",
+      homeTeamLogo: "/images/pachuca-logo.jpeg",
+      awayTeamLogo: "/images/america-logo.png",
+      stadium: "Estadio Hidalgo",
+      date: "Miércoles 7 de mayo",
+      time: "21:10 hrs México",
+      timeET: "23:10 hrs ET",
+      timePT: "20:10 hrs Pacífico",
+      prices: [
+        { zone: "NORTE", price: "$1,200.00" },
+        { zone: "ORIENTE", price: "$1,200.00" },
+        { zone: "PONIENTE", price: "$1,200.00" },
+        { zone: "SUR", price: "$1,200.00" },
+      ],
+      discount: "30%",
+    },
+    {
+      id: "leon-cruz-azul",
+      homeTeam: "León",
+      awayTeam: "Cruz Azul",
+      homeTeamLogo: "/images/leon-logo.jpeg",
+      awayTeamLogo: "/images/cruz-azul-logo.png",
+      stadium: "Estadio Nou Camp",
+      date: "Jueves 8 de mayo",
+      time: "21:10 hrs México",
+      timeET: "23:10 hrs ET",
+      timePT: "20:10 hrs Pacífico",
+      prices: [
+        { zone: "SOL", price: "$1,000 - $1,300" },
+        { zone: "PREF", price: "$1,500 - $1,700" },
+        { zone: "ZONA A", price: "$1,700" },
+      ],
+      discount: "30%",
+    },
+  ]
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {soccerMatches.map((match, index) => (
-          <motion.div
-            key={match.id}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            viewport={{ once: true }}
-            whileHover={{ y: -5 }}
-            className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
-          >
-            <Link href={match.url} className="block">
-              <div className="relative h-40">
-                <Image src={match.image || "/placeholder.svg"} alt={match.title} fill className="object-cover" />
+  return (
+    <div className="w-full max-w-7xl mx-auto px-4 py-8">
+      <h2 className="text-2xl font-bold mb-6">Partidos de Fútbol Destacados</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {matches.map((match) => (
+          <Link href={`/event/${match.id}`} key={match.id} className="block">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="p-4 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
+                <div className="flex justify-between items-center">
+                  <div className="flex items-center space-x-2">
+                    <Image
+                      src={match.homeTeamLogo || "/placeholder.svg"}
+                      alt={match.homeTeam}
+                      width={40}
+                      height={40}
+                      className="rounded-full bg-white p-1"
+                    />
+                    <span className="font-bold">{match.homeTeam}</span>
+                  </div>
+                  <span className="text-xl font-bold">VS</span>
+                  <div className="flex items-center space-x-2">
+                    <span className="font-bold">{match.awayTeam}</span>
+                    <Image
+                      src={match.awayTeamLogo || "/placeholder.svg"}
+                      alt={match.awayTeam}
+                      width={40}
+                      height={40}
+                      className="rounded-full bg-white p-1"
+                    />
+                  </div>
+                </div>
               </div>
 
               <div className="p-4">
-                <div className="flex justify-between items-center mb-4">
-                  <div className="flex flex-col items-center">
-                    <div className="w-16 h-16 relative">
-                      <Image
-                        src={match.homeTeamLogo || "/placeholder.svg"}
-                        alt={match.homeTeam}
-                        fill
-                        className="object-contain"
-                      />
-                    </div>
-                    <span className="text-sm font-medium mt-1">{match.homeTeam}</span>
+                <div className="flex justify-between items-center mb-2">
+                  <div>
+                    <p className="text-gray-600">{match.stadium}</p>
+                    <p className="font-semibold">{match.date}</p>
+                    <p className="text-sm text-gray-500">{match.time}</p>
+                    <p className="text-xs text-gray-400">
+                      {match.timeET} / {match.timePT}
+                    </p>
                   </div>
-
-                  <div className="text-center">
-                    <span className="text-xl font-bold">VS</span>
-                  </div>
-
-                  <div className="flex flex-col items-center">
-                    <div className="w-16 h-16 relative">
-                      <Image
-                        src={match.awayTeamLogo || "/placeholder.svg"}
-                        alt={match.awayTeam}
-                        fill
-                        className="object-contain"
-                      />
-                    </div>
-                    <span className="text-sm font-medium mt-1">{match.awayTeam}</span>
-                  </div>
+                  <Badge className="bg-red-600 hover:bg-red-700">-{match.discount}</Badge>
                 </div>
 
-                <div className="space-y-2 mb-4">
-                  <div className="flex items-center text-sm text-gray-600">
-                    <Calendar className="h-4 w-4 mr-2" />
-                    <span>{match.date}</span>
-                  </div>
-
-                  <div className="flex items-center text-sm text-gray-600">
-                    <Clock className="h-4 w-4 mr-2" />
-                    <span>{match.time}</span>
-                  </div>
-
-                  <div className="flex items-center text-sm text-gray-600">
-                    <MapPin className="h-4 w-4 mr-2" />
-                    <span>{match.venue}</span>
-                  </div>
+                <div className="mt-3 border-t pt-3">
+                  <p className="font-semibold text-sm mb-1">Precios:</p>
+                  <ul className="text-sm text-gray-600">
+                    {match.prices.map((price, index) => (
+                      <li key={index} className="flex justify-between mb-1">
+                        <span>{price.zone}</span>
+                        <span className="font-medium">{price.price}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
-                <Button className="w-full bg-purple-900 hover:bg-purple-800">Ver boletos</Button>
+                <button className="w-full mt-4 bg-green-600 hover:bg-green-700 text-white py-2 rounded-md font-medium transition-colors duration-300">
+                  Ver Boletos
+                </button>
               </div>
-            </Link>
-          </motion.div>
+            </div>
+          </Link>
         ))}
       </div>
-    </section>
+    </div>
   )
 }
