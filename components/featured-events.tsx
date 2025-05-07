@@ -11,16 +11,6 @@ import { CountdownTimer } from "@/components/countdown-timer"
 const featuredEvents = [
   {
     id: 1,
-    title: "Tecate Emblema",
-    venue: "Autódromo Hermanos Rodríguez, CDMX",
-    date: "16 y 17 de mayo de 2025",
-    image: "/images/tecate-emblema-2025.png",
-    url: "/event/tecate-emblema",
-    targetDate: "2025-05-16T14:00:00",
-    tickets: 8,
-  },
-  {
-    id: 2,
     title: "Zoé",
     venue: "Estadio GNP Seguros, CDMX",
     date: "01 de octubre de 2025",
@@ -30,7 +20,7 @@ const featuredEvents = [
     tickets: 6,
   },
   {
-    id: 3,
+    id: 2,
     title: "Pedro Fernández",
     venue: "Auditorio Telmex, Zapopan",
     date: "16 de mayo de 2025",
@@ -41,7 +31,7 @@ const featuredEvents = [
     tickets: 6,
   },
   {
-    id: 4,
+    id: 3,
     title: "Ha*Ash",
     venue: "Auditorio Telmex, Zapopan",
     date: "30 de mayo de 2025",
@@ -49,6 +39,17 @@ const featuredEvents = [
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3270ae35e582df4f75869fd03245a186-aRV8JoG3za8HZBc09D9L9UQF3QDTIJ.webp",
     url: "/event/ha-ash-telmex",
     targetDate: "2025-05-30T21:00:00",
+    tickets: 6,
+  },
+  {
+    id: 4,
+    title: "Maluma",
+    venue: "Palacio de los Deportes, CDMX",
+    date: "08 de agosto de 2025",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/a90b0b892fdf8b1f4fd64f86ced62338-isGdNjLWv9hiM6OzSGGuZpr0T0sZoc.webp",
+    url: "/event/maluma-palacio",
+    targetDate: "2025-08-08T21:00:00",
     tickets: 6,
   },
 ]

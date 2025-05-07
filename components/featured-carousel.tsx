@@ -7,17 +7,10 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
 
+// Quitar el evento de Tecate Emblema del carrusel
 const events = [
   {
     id: 1,
-    title: "Tecate Emblema 2025",
-    description: "El festival más esperado con Alanis Morissette, David Guetta, Morat, Pitbull y más",
-    date: "16 y 17 de mayo de 2025",
-    image: "/images/tecate-emblema-2025.png",
-    url: "/event/tecate-emblema",
-  },
-  {
-    id: 2,
     title: "Zoé en Estadio GNP",
     description: "¡La espera terminó! Zoé regresa con un show legendario",
     date: "01 de octubre de 2025",
@@ -25,7 +18,7 @@ const events = [
     url: "/event/zoe",
   },
   {
-    id: 3,
+    id: 2,
     title: "Imagine Dragons",
     description: "La banda internacional llega a México con su gira mundial",
     date: "Próximamente",
@@ -33,13 +26,22 @@ const events = [
     url: "/event/imagine-dragons",
   },
   {
-    id: 4,
+    id: 3,
     title: "Ha*Ash en Auditorio Nacional",
     description: "El dúo más exitoso del pop latino en concierto",
     date: "12 de junio de 2025",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3270ae35e582df4f75869fd03245a186-aRV8JoG3za8HZBc09D9L9UQF3QDTIJ.webp",
     url: "/event/ha-ash-nacional",
+  },
+  {
+    id: 4,
+    title: "Champions League Final",
+    description: "La final más esperada del fútbol europeo en Londres",
+    date: "31 de mayo de 2025",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/sh_clf25_414x90_x2_MX-WN9XheEhc9PZQ6r9b81tOYpG99dw7a.jpeg",
+    url: "/event/champions-league-final",
   },
 ]
 

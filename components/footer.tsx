@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react"
+// Importar el componente SocialIcons
+import { SocialIcons } from "@/components/social-icons"
 
 export function Footer() {
   return (
@@ -114,19 +115,9 @@ export function Footer() {
               </Link>
             </div>
 
+            {/* Reemplazar la sección de redes sociales en el footer */}
             <div className="flex space-x-4 mt-4 md:mt-0">
-              <Link href="#" className="text-gray-600 hover:text-purple-900">
-                <Facebook className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="text-gray-600 hover:text-purple-900">
-                <Instagram className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="text-gray-600 hover:text-purple-900">
-                <Twitter className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="text-gray-600 hover:text-purple-900">
-                <Linkedin className="h-5 w-5" />
-              </Link>
+              <SocialIcons />
             </div>
           </div>
 
@@ -136,6 +127,12 @@ export function Footer() {
               Términos de uso y Política de privacidad. Este sitio no es un vendedor de boletos. Los vendedores fijan
               los precios, los cuales pueden ser mayores que su valor nominal.
             </p>
+          </div>
+
+          {/* También agregar una sección adicional de iconos sociales en la parte inferior */}
+          <div className="text-center mt-6">
+            <h3 className="font-bold text-lg mb-4">Síguenos en redes sociales</h3>
+            <SocialIcons className="justify-center" iconSize={24} />
           </div>
 
           <div className="flex justify-center mt-4 space-x-4">
