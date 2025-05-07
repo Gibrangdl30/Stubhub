@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Image from "next/image"
+import Image from "content://media/external/downloads/1000046698"
 import { Header } from "@/components/header"
 import { Card, CardContent } from "@/components/ui/card"
 import { Shield, Mail, Phone, Calendar, MapPin, Clock, User } from "lucide-react"
@@ -179,7 +179,7 @@ export default function PesoPlumaPage() {
 
                       <div className="border-b pb-3">
                         <h3 className="font-semibold mb-1">Límite de boletos</h3>
-                        <p className="text-sm">8 por persona</p>
+                        <p className="text-sm">4 por persona</p>
                       </div>
                     </div>
                   </TabsContent>
