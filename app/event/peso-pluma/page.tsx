@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Image from "content://media/external/downloads/1000046698"
+import Image from "https://lh3.googleusercontent.com/fife/ALs6j_GoK5xGLnBPo7U4v0iV7siNdDZDRXluxghBw23FNk3EYmcfQf5YBsMMrXiguY9B6dhq3lcuFLDy9lOvhBgHCWFkSCxR8AkvYO7lL2rxDy-Lsk7u-gk44HbiDLyF0XRSAg30V4USOCeLv0SAwRobJpxNbCrh6h5Xgqt0XlTkHOdoauCGLZdG66eZRxLU2oUmiJY74JAwWvmNYdRfAHTS_uEGbjiwpne6ynOqbCLgNWWRvtbuzPsQE5e_ZpOq4wfzuzc99GUZ1wbfwYZsGvKEyiyGs4PBmZqHOdfU4_tFzbxRuMaZPiSkuYvlsZfJ8EmgsQ6JSIQSl6Hbi5c_tGVDKVDM6izsL2u38pvPbKNtRe6njO-1N071YMrUaFS7nWEYTGo6Zche_ThEgcgX5zvd0IjUC42qBPF0A2xsT3npehG8I3-Kg1JZdbXA-w8I9ueB06-WiGVwpkV2VjJSsqQzw903D8LyqTiKkxg2l4Q4_tAVa8OLQ1NjNsp3O8ooqokU-jsUix-IJ2PREZ-T2z9XpYiJSO1OlHi4z43Qy7oeMdn2t8i1Q9PThbUd4pcy0P7LwVqqs8XaKPGZ8UbazFrrt9GosYvexfKx5lHvvEWU5U1XV_g3NXWJx4yChs8bo3UNIQDfdtALzxJJSUAaVnYXwsip6a106QiDbya4P3PNcQ2NXucgJ5esTXQouaKP1d_FGGGgfBJTVMsjb6iLo63ewghvX8HN6uhwnfXVDs9sM9C7aRTbSAO5rVHrjDtIeHf1N-wY4ByD-eENRaAfKP8puXj5LwZwW3qPA27pjPHrwHLDGefBFR_hbBc2TjmL6YB8ieH7qWfCuBttSpSznvUIGmJ3UvQhOr7L_BoVEInwOJxieCE-EybAgj3kN2pQkcFMLR8IcUYnow9uJY9H4n1Lp3khAmEGyjKs0VxgP1hBwyS98akGaTnX6wnObiH2s1ZWIj3c6umtNJ7ORTSPlHYmkoSj5g0gK06IOcDQTwwJ2SxF9vFhjMuRjdMWo-fGV6s2RWSvyffI2Y-TB3brxohatAnEPeYaKu9giC9Vqg5Ae0SwxzoaIbPuks-IWFXSdaMAT3nxhyJNmo85slz-EtoENkhozFUdef_pFwB8Ys1cyBZLlagu3VXqbd1USLs-okfxoOY_NldHpHSTUEPw5fqcuH5u5lL7czx-DTd_1nkJYgcfLRjMb4VhXEd7O32ee6NepvqwFh39OjkGoe8qpnKBQgvCDNhQXiubT5niLcniJGA-YvF_7tHE3NMkQ_irf35EeJICIqs5gRUQ6KW5JmxEl2ex9Q5nqKmx9dX4zQ5QHIHnkbfhYb3H097WADLEChV5nsJlJbSS5jZLXoey-2vTipSQNrWGb799yRM4x2R2L3bHBSDF6cw7AJGsezLZ_fqNTK0rsJ2Uz3PK4m9GOnfknlPEuKmZHXicc_tlnLz15hDez_JUCFKD5-jaqexP8vS_E7Z6xGdf6NHr5hqoZLQMRHi5-pCOJwUagaIYu7nZJR-5Pg28SbOUmU8Neg0t8yP9CukhVD5I_Khj4R_73Vn4XZN8989dcKHz2RJh36OzFIVKpnlBIZh6Hg6PUKkti8xHtIRSiESGPdZUH4A=s1620-w1080-h1620-n-k?authuser=0&hl=es-US"
 import { Header } from "@/components/header"
 import { Card, CardContent } from "@/components/ui/card"
 import { Shield, Mail, Phone, Calendar, MapPin, Clock, User } from "lucide-react"
@@ -11,8 +11,8 @@ import { StripePaymentButton } from "@/components/stripe-payment-button"
 
 export default function PesoPlumaPage() {
   // Precios
-  const cardPrice = 2800
-  const transferPrice = 2400
+  const cardPrice = 2400
+  const transferPrice = 2000
   const ticketsRemaining = 10
 
   return (
@@ -55,7 +55,7 @@ export default function PesoPlumaPage() {
           <div className="md:col-span-2">
             <div className="mb-6">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/descarga%20%283%29-sn6H308VsZ08J7l6aCg6BSpRCT8Z98.webp"
+                src="https://lh3.googleusercontent.com/fife/ALs6j_GoK5xGLnBPo7U4v0iV7siNdDZDRXluxghBw23FNk3EYmcfQf5YBsMMrXiguY9B6dhq3lcuFLDy9lOvhBgHCWFkSCxR8AkvYO7lL2rxDy-Lsk7u-gk44HbiDLyF0XRSAg30V4USOCeLv0SAwRobJpxNbCrh6h5Xgqt0XlTkHOdoauCGLZdG66eZRxLU2oUmiJY74JAwWvmNYdRfAHTS_uEGbjiwpne6ynOqbCLgNWWRvtbuzPsQE5e_ZpOq4wfzuzc99GUZ1wbfwYZsGvKEyiyGs4PBmZqHOdfU4_tFzbxRuMaZPiSkuYvlsZfJ8EmgsQ6JSIQSl6Hbi5c_tGVDKVDM6izsL2u38pvPbKNtRe6njO-1N071YMrUaFS7nWEYTGo6Zche_ThEgcgX5zvd0IjUC42qBPF0A2xsT3npehG8I3-Kg1JZdbXA-w8I9ueB06-WiGVwpkV2VjJSsqQzw903D8LyqTiKkxg2l4Q4_tAVa8OLQ1NjNsp3O8ooqokU-jsUix-IJ2PREZ-T2z9XpYiJSO1OlHi4z43Qy7oeMdn2t8i1Q9PThbUd4pcy0P7LwVqqs8XaKPGZ8UbazFrrt9GosYvexfKx5lHvvEWU5U1XV_g3NXWJx4yChs8bo3UNIQDfdtALzxJJSUAaVnYXwsip6a106QiDbya4P3PNcQ2NXucgJ5esTXQouaKP1d_FGGGgfBJTVMsjb6iLo63ewghvX8HN6uhwnfXVDs9sM9C7aRTbSAO5rVHrjDtIeHf1N-wY4ByD-eENRaAfKP8puXj5LwZwW3qPA27pjPHrwHLDGefBFR_hbBc2TjmL6YB8ieH7qWfCuBttSpSznvUIGmJ3UvQhOr7L_BoVEInwOJxieCE-EybAgj3kN2pQkcFMLR8IcUYnow9uJY9H4n1Lp3khAmEGyjKs0VxgP1hBwyS98akGaTnX6wnObiH2s1ZWIj3c6umtNJ7ORTSPlHYmkoSj5g0gK06IOcDQTwwJ2SxF9vFhjMuRjdMWo-fGV6s2RWSvyffI2Y-TB3brxohatAnEPeYaKu9giC9Vqg5Ae0SwxzoaIbPuks-IWFXSdaMAT3nxhyJNmo85slz-EtoENkhozFUdef_pFwB8Ys1cyBZLlagu3VXqbd1USLs-okfxoOY_NldHpHSTUEPw5fqcuH5u5lL7czx-DTd_1nkJYgcfLRjMb4VhXEd7O32ee6NepvqwFh39OjkGoe8qpnKBQgvCDNhQXiubT5niLcniJGA-YvF_7tHE3NMkQ_irf35EeJICIqs5gRUQ6KW5JmxEl2ex9Q5nqKmx9dX4zQ5QHIHnkbfhYb3H097WADLEChV5nsJlJbSS5jZLXoey-2vTipSQNrWGb799yRM4x2R2L3bHBSDF6cw7AJGsezLZ_fqNTK0rsJ2Uz3PK4m9GOnfknlPEuKmZHXicc_tlnLz15hDez_JUCFKD5-jaqexP8vS_E7Z6xGdf6NHr5hqoZLQMRHi5-pCOJwUagaIYu7nZJR-5Pg28SbOUmU8Neg0t8yP9CukhVD5I_Khj4R_73Vn4XZN8989dcKHz2RJh36OzFIVKpnlBIZh6Hg6PUKkti8xHtIRSiESGPdZUH4A=s1620-w1080-h1620-n-k?authuser=0&hl=es-US"
                 alt="Peso Pluma"
                 width={800}
                 height={500}
